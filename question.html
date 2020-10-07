@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, height=device-height, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>티몬 테스트</title>
+
+<style type="text/css">
+figure{
+	float:left;
+	width:33.3%;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+img{
+	width:100%;
+	max-width:387px;
+	border:3px solid black;
+}
+</style>
+
+</head>
+<body>
+
+<h1>티켓몬스터 FE 직군 경력 입사테스트</h1>
+<h2>개발 환경 및 제약 사항 안내</h2>
+<p>Programming platform, plugin의 제약은 없습니다. HTML 과 CSS, Javascript 를 사용한다면 어떤 platform, plugin 을 사용해도 됩니다. 사용자 입력 등의 UI 측면도 CLI, GUI 등 자유롭게 구성할 수 있습니다.</p>
+<h2>제출 안내</h2>
+<p>제출하는 소스는 하나의 압축파일로 되어 있어야 합니다. <br>제출 소스는 <a href="answer.html">answer.html</a> 파일을 브라우저 상에서 실행하여 결과를 확인하는 것이 가능해야 합니다.</p>
+<p>마크업은 따로 할 필요없이 <a href="answer.html">answer.html</a>에 포함되어 있으므로 사용하시면 됩니다. 필요하다면 마크업 수정 가능합니다.</p>
+<p>javascript 파일은 js 폴더에 자리하면 됩니다. 만약 별도의 개발환경을 구축하였거나, 기타 이유로 필요시 자유롭게 변경하셔도 무방합니다.</p>
+<p>jQuery 이외의 프레임워크(react, vue등) 또는 플러그인(jQuery도 Core만 사용 가능, jQuery 플러그인 사용금지) 사용을 금지합니다.</p>
+<p>반드시 ES6 문법 사용 해야하며, Chrome 최신버젼으로 테스트하므로 ES5로 transpiling 할 필요없습니다.</p>
+<h2>평가 기준</h2>
+<p>각 문항은 아래와 같은 기준에서 평가됩니다.</p>
+<ul>
+	<li>기본 기능을 충실히 구현 했는지 평가합니다.</li>
+	<li>장기적으로 유지보수가 가능한 코드인지를 평가합니다.</li>
+	<li>로직이 얼마나 간결하고 잘 짜여있는지 평가합니다.</li>
+	<li>코드는 Readability 가 높음을 수록 높이 평가합니다. 리팩토링 및 주석추가를 게을리하지 마십시오.</li>
+	<li>ES6 문법을 얼마나 잘 활용하였는지 평가합니다.</li>
+</ul>
+<p>아래 기준은 평가하지 않습니다.</p>
+<ul>
+	<li>모든 스펙을 구현했는지가 곧 당락을 결정짓지 않습니다. (일부만 구현하더라도 부분 평가합니다.)</li>
+</ul>
+<p>만약 작성한 코드에 대해 부연설명이 필요하다면, (ex. 왜 이렇게 개발하였는지, 이 부분은 어떻게 서버개발이 진행되었으면 좋겠는지 등) 별도의 txt 파일이나 html 내에 주석을 사용하여 설명하셔도 됩니다. <br>부연설명과 그에 따른 코드사용이 합당하다면 추가 가산점이 있습니다.</p>
+<h2>기타</h2>
+<p>본 안내 및 문제 출제 내용에 설명되지 않은 내용은 "자유롭게" 결정하여 진행하실 수 있습니다.</p>
+
+
+<h2>개발항목</h2>
+<p>이미지를 참고하여, 같은 어플리케이션을 <a href="answer.html">answer.html</a> 에 개발하여 제출하시면 됩니다.</p>
+<p>구현에 있어서는 아래 스펙을 만족하여야 합니다.</p>
+
+<h3>기본규칙</h3>
+<ul>
+	<li>바탕화면(쪽지가 아닌 회색부분)에 마우스 우클릭시 마우스 위치가 top, left값을 가지는 새로운 쪽지를 생성합니다. answer.html 참고(기본 크기 div.textarea : width:200px, height:100px;)</li>
+	<li>쪽지의 헤더 부분 드래그시 쪽지를 바탕화면 내에서 이동이 가능해야합니다.(Drag & Drop 플러그인 사용금지, 직접구현해야 함)</li>
+	<li>드래그 드랍 또는 내용 수정시에 해당하는 쪽지는 겹쳐진 쪽지 중 최상단으로 나와야합니다.</li>
+	<li>X 버튼 클릭시 삭제 되어야합니다.</li>
+	<li>쪽지 우 하단 드래그시 크기가 변경되어야 합니다. 크기 변경은 div.textarea의 width, height가 변경되어야 합니다.</li>
+	<li>모든 쪽지 내용, 위치, 크기, 쌓이는 순서는 localStorage에 저장되어야 하며, 리로드시 모든 쪽지가 그대로 나와야합니다.</li>
+</ul>
+
+
+
+<figure>
+	<img src="./img/memo.png" alt="어플리케이션 전경">
+	<figcaption>그림 1. 쪽지</figcaption>
+</figure>
+
+</body>
+</html>
