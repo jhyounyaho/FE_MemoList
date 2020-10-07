@@ -24,19 +24,19 @@ DateInfo.js, ScreenInfo.js 에서 따로 관리함
                              
 ### 4. localStorage에 들어갈 memo data                      
 memo = {                              
-    id: 'memo_1',                                      
-    content: '메모 작성',                                        
-    position: {                               
-      top: 50,                                      
-      left: 100                                
-    },                                
-    size: {                                
-      width: 100,                            
-      height: 200                                
-    },                            
-    order: 1,                              
-    insert_date: '2020-10-06 22:04:57',                       
-    update_date: '2020-10-06 23:05:57' 	                                  
+        id: 'memo_1',                                      
+        content: '메모 작성',                                        
+        position: {                               
+              top: 50,                                      
+              left: 100                                
+        },                                
+        size: {                                
+              width: 100,                            
+              height: 200                                
+        },                            
+        order: 1,                              
+        insert_date: '2020-10-06 22:04:57',                       
+        update_date: '2020-10-06 23:05:57' 	                                  
   }                      
                                 
 insert_date, update_date                                    
