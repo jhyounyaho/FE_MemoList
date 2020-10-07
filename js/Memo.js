@@ -233,7 +233,7 @@ export default class Memo {
     this.startResizeX = e.clientX;
     this.startResizeY = e.clientY;
 
-    // 리사이즈시 메모 크기 char > int
+    // 리사이즈시 메모 크기 char > int 형변환
     this.startResizeWidth = parseInt(
       document.defaultView.getComputedStyle(this.resize_area).width,
       10

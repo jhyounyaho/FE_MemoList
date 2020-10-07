@@ -56,6 +56,7 @@ export default class MemoManage {
   createMemo = (memo) =>
     new Promise((resolve, reject) => {
       this.storageMemoList = this.parsingMemoList();
+      // insert_date 입력시간 추후 DB에 메모 데이터 들어갈 경우를 고려하여 추가
       memo.insert_date = getFormatDate("ymdhsc");
       this.storageMemoList.push(memo);
       localStorage.memolist = JSON.stringify(this.storageMemoList);
@@ -70,6 +71,7 @@ export default class MemoManage {
   updateMemo = (memo) =>
     new Promise((resolve, reject) => {
       this.storageMemoList = this.parsingMemoList();
+      // update_date 수정시간 추후 DB에 메모 데이터 들어갈 경우를 고려하여 추가
       memo.update_date = getFormatDate("ymdhsc");
       const index = this.findIndexMemo(memo.id);
       this.storageMemoList[index] = memo;
