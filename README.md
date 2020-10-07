@@ -21,28 +21,28 @@ jquery	3.5.1
 개발시 자주 사용되는 부분을 소스의 통일감과 유지보수를 고려하여 
 DateInfo.js, ScreenInfo.js 에서 따로 관리함
 추후 date, screen 관련 작업시 해당 파일에서 필요한 부분만 import에서 사용
-
-### 4. localStorage에 들어갈 memo data
-memo = {
-    id: 'memo_1', 
-    content: '메모 작성',
-    position: {
-      top: 50,
-      left: 100
-    },
-    size: {
-      width: 100,
-      height: 200
-    },
-    order: 1,
-    insert_date: '2020-10-06 22:04:57', 
-    update_date: '2020-10-06 23:05:57' 	
-  }
-
-insert_date, update_date
-=> 추후 DB에 메모 데이터 들어갈 경우를 고려하여 추가
-   date형식에 맞춰 YYYY-MM-DD HH:MM:SS 으로 가공
-
+                             
+### 4. localStorage에 들어갈 memo data                      
+memo = {                              
+    id: 'memo_1',                                      
+    content: '메모 작성',                                        
+    position: {                               
+      top: 50,                                      
+      left: 100                                
+    },                                
+    size: {                                
+      width: 100,                            
+      height: 200                                
+    },                            
+    order: 1,                              
+    insert_date: '2020-10-06 22:04:57',                       
+    update_date: '2020-10-06 23:05:57' 	                                  
+  }                      
+                                
+insert_date, update_date                                    
+=> 추후 DB에 메모 데이터 들어갈 경우를 고려하여 추가                       
+   date형식에 맞춰 YYYY-MM-DD HH:MM:SS 으로 가공                      
+                               
 ### 5. 기능 
 - 메모 하나의 class 
 - 메모 내용, 위치, 크기, 사이즈, 쌓이는 순서 localStorage에 저장하여 리로드시 동일 결과 노출 
