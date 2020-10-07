@@ -18,8 +18,32 @@ jquery	3.5.1
         ├── ScreenInfo.js           # 자주 사용하는 screen관련 함수 file  
         └── memo_script.js          # memo.html에서 로드하는 스크립트 file      
     └── answer.html                     
-    
-### 4. 기능 
+개발시 자주 사용되는 부분을 소스의 통일감과 유지보수를 고려하여 
+DateInfo.js, ScreenInfo.js 에서 따로 관리함
+추후 date, screen 관련 작업시 해당 파일에서 필요한 부분만 import에서 사용
+
+### 4. localStorage에 들어갈 memo data
+memo = {
+    id: 'memo_1', 
+    content: '메모 작성',
+    position: {
+      top: 50,
+      left: 100
+    },
+    size: {
+      width: 100,
+      height: 200
+    },
+    order: 1,
+    insert_date: '2020-10-06 22:04:57', 
+    update_date: '2020-10-06 23:05:57' 	
+  }
+
+insert_date, update_date
+=> 추후 DB에 메모 데이터 들어갈 경우를 고려하여 추가
+   date형식에 맞춰 YYYY-MM-DD HH:MM:SS 으로 가공
+
+### 5. 기능 
 - 메모 하나의 class 
 - 메모 내용, 위치, 크기, 사이즈, 쌓이는 순서 localStorage에 저장하여 리로드시 동일 결과 노출 
 - 바탕 우클릭시 메모 생성 
@@ -28,5 +52,5 @@ jquery	3.5.1
 - 메모 header 클릭시 드래그/드랍  
 - 메모 btn_size 클릭시 리사이즈 
 
-### 5. 결과 화면
-![javascript_memo](https://user-images.githubusercontent.com/42309919/94541391-7fea5600-0282-11eb-95e4-81e6edfc5fcb.PNG)
+### 6. 결과 화면
+![memolist](https://user-images.githubusercontent.com/42309919/95349607-3ccf5900-08fa-11eb-8cee-530459df16c6.PNG)
