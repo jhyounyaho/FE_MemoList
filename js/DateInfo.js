@@ -7,7 +7,7 @@
 /*
   getFromatDate function
   date 가공하는 function
-  @data   cate_case   : char date 포맷 유형
+  @data   date_case   : char date 포맷 유형
   @return date_format : char date 포맷 결과 
 */
 export const getFormatDate = (date_case) => {

@@ -78,8 +78,8 @@ export default class Memo {
     this.dragger = document.querySelector(`#${this.id} .header`);
     this.dragger.addEventListener("mousedown", this.initDrag.bind(this), false);
     this.holder = document.querySelector(".wrap");
-    this.holder.addEventListener("dragover", this.dragOver.bind(this), false);
     this.holder.addEventListener("dragenter", this.dragEnter.bind(this), false);
+    this.holder.addEventListener("dragover", this.dragOver.bind(this), false);
     this.holder.addEventListener("drop", this.drop.bind(this), false);
 
     // resize event
@@ -149,6 +149,7 @@ export default class Memo {
   */
   dragStart = (e) => {
     // 전체 문서를 기준으로 x,y 좌표 반환. 스크롤 화면을 포함해서 측정
+    // 클릭 위치 구하는 공식 
     this.startDragX = e.pageX - this.drag_area.offsetLeft;
     this.startDragY = e.pageY - this.drag_area.offsetTop;
     return true;
@@ -187,6 +188,11 @@ export default class Memo {
   */
   dragEnd = (e) => {
     // 화면내 값 체크
+    /*
+      e.pageX 드래그된 x 좌표 
+      this.startDragX 클릭된 x좌표 
+      this.drag_area.offsetWidth 드래그 요소의 width 
+    */
     const calX = getInnerPositionX(
       e.pageX - this.startDragX,
       this.drag_area.offsetWidth
