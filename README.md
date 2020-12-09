@@ -3,7 +3,7 @@
 ### 1. 개발 환경
 - HTML5
 - Javascript
-- CSS
+- CSS   
 
 ### 2. library
 jquery	3.5.1
